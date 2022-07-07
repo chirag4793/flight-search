@@ -1,0 +1,6 @@
+{
+    "/api": {
+    "target": "https://api-uat-ezycommerce.ezyflight.se",
+    "secure": false
+    }
+    }

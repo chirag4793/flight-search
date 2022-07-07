@@ -1,0 +1,27 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.navbar-default {
+  background-color: #281C38;
+  border-color: #e7e7e7;
+  color: whitesmoke;
+}
+
+.navbar {
+  position: relative;
+  min-height: 50px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  box-shadow: 5px 5px 5px black, inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
+}
+
+.navbar-default .navbar-brand {
+  color: #C38A00;
+  font-size: 2em;
+  font-family: 'Poppins', sans-serif;
+}
+
+

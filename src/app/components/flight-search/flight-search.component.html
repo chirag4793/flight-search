@@ -1,0 +1,115 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Flight Finder</a>
+      </div>
+    </div>
+  </nav>
+<hr>
+
+
+
+
+
+<form>
+
+    <div class="radio">
+        <label>
+            <input type="radio" name="trip" ng-model="vm.tripType" [checked]='true' value="oneWay"/>
+            One Way
+        </label>
+      </div>
+    <div class="radio">
+        <label>
+            <input [value]="1"type="radio" name="trip" ng-model="vm.tripType" value="return"/>
+            Round Trip
+        </label>
+      </div>
+ 
+
+
+
+
+      
+
+     
+       <div>
+
+          <div class="form-group">
+            <label for="originCity">Origin City</label>
+            <select
+            
+              (change)="selectAirport($event)"
+              class="form-control"
+              id="originCity"
+              name="originCity"
+              required
+            >
+            <option value="" [disabled]="true" selected>
+                Enter Origin City
+              </option>
+            <option *ngFor="let x of airportloc?.airports let i = index" [value]="i">{{x['name']}}</option>
+            </select>
+          </div>
+
+           
+
+
+          <div class="form-group">
+            <label for="destinationCity">Destination City</label>
+            <select
+            
+              class="form-control"
+              id="destinationCity"
+              name="destinationCity"
+              
+            
+            >
+            <option value="" [disabled]="true" selected>
+                Enter Destination City
+              </option>
+              <option *ngFor="let v of selectedValue?.connections">{{v['name']}}</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="startDate">Departure Date :</label>
+            <div class="form-group">
+                <input type="date" name="startDate" ngModel class="form-control" id="startDate" placeholder="Enter Departure Date">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="endDate">Return Date :</label>
+            <div class="form-group">
+                <input type="date" name="endDate" ngModel class="form-control" id="endDate" placeholder="Return Date">
+            </div>
+        </div>
+
+
+          <div class="form-group">
+            <label for="passCount">Passenger Count</label>
+            <input
+              type="number"
+              class="form-control"
+              [(ngModel)]="passangerCount"
+              id="passCount"
+              name="passCount"
+              placeholder="No. of passengers"
+              required
+              #passCount="ngModel"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="submit"
+              class="form-control"
+              class="btn btn-primary btn-block"
+              value="Submit"
+              (click)="onSelectedSource('Add further implementation to view results.')"
+             
+            />
+          </div>
+      
+                   
+       </div>
+</form>

@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    background-image: url("https://www.wallpapersin4k.org/wp-content/uploads/2017/04/Airplane-Full-HD-Wallpaper-9.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    font-family: 'Nunito', sans-serif;
+  }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
